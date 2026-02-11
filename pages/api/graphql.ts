@@ -2,8 +2,9 @@ import { ApolloServer } from "@apollo/server";
 import { startServerAndCreateNextHandler } from "@as-integrations/next";
 import { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
 
-import { resolvers } from "@/graphql/resolver";
+import { resolvers } from "@/graphql/resolvers";
 import { typeDefs } from "@/graphql/schema";
+import dbConnect from "@/middleware/db-connect";
 
 const server = new ApolloServer({ resolvers, typeDefs });
 
@@ -21,4 +22,9 @@ const allowCors = (fn: NextApiHandler) => async (req: NextApiRequest, res: NextA
 	return await fn(req, res);
 };
 
-export default allowCors(handler);
+const connectDB = (func: NextApiHandler) => async (req: NextApiRequest, res: NextApiResponse) => {
+    await dbConnect();
+    return await func(req, res);
+};
+
+export default connectDB(allowCors(handler));
