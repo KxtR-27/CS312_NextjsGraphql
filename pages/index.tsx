@@ -22,11 +22,15 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div
-                className={`${styles.page}`}
-            >
-                <main className={styles.main}>
-                    ...
+            <div className="page">
+                <main>
+                    <h1>Mongoose Activity</h1>
+                    <ul>
+                        <li><a href="/api/weather/zipcode/96815">
+                            REST API weather for zipcode <code className={styles.code}>96815</code>
+                        </a></li>
+                        <li><a href="/api/graphql">GraphQL API weather</a></li>
+                    </ul>
                 </main>
             </div>
         </>

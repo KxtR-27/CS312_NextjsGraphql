@@ -8,3 +8,5 @@ const handler: NextApiHandler = async (req, res): Promise<NextApiResponse<Weathe
 	const data = await findByZip(req.query.zipcode as string);
 	return res.status(200).json(data);
 };
+
+export default handler;
