@@ -6,7 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"test": "jest --coverage"
+		"test": "jest --coverage",
+        "test-frontend": "npm test -- -u"
 	},
 	"dependencies": {
 		"@apollo/server": "^5.3.0",
