@@ -1,5 +1,5 @@
-import { fibonacci } from "../helpers/fibonacci";
-jest.mock("../helpers/sum");
+import { fibonacci } from "../../helpers/fibonacci";
+jest.mock("../../helpers/sum");
 
 describe("the fibonacci sequence", () => {
 	test("with length of 0 should be ''", () => {

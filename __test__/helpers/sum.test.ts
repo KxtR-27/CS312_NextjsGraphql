@@ -1,4 +1,4 @@
-import { sum } from "../helpers/sum";
+import { sum } from "../../helpers/sum";
 
 describe("the sum function", () => {
 	test("2 + 2 = 4", () => {
