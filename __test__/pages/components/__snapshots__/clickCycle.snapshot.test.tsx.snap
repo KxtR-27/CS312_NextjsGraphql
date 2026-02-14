@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`PageComponentClickCycle renders correctly 1`] = `
+[
+  <h1>
+    Click Cycle
+  </h1>,
+  <div
+    className="click-cycle"
+  >
+    <blockquote>
+      do we need her legs? no!
+    </blockquote>
+    <button
+      onClick={[Function]}
+    >
+      Cycle!
+    </button>
+  </div>,
+]
+`;
